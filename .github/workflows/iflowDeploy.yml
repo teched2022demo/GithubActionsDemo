@@ -8,5 +8,5 @@ jobs:
       - name: integrationArtifactDeploy
         uses: SAP/project-piper-action@main
         with:
-          command: integrationArtifactDeploy
+          step-name: integrationArtifactDeploy
           flags: --cpiApiServiceKeyCredentialsId ${{ secrets.CPIAPISERVICEKEYCREDENTIALSID }} --integrationFlowId healthCheck
