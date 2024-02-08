@@ -1,0 +1,17 @@
+name: SAP Cloud Integration deploy IFlow
+on:
+  push:
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+      - name: mavenBuild
+        uses: SAP/project-piper-action@master
+        with:
+          command: mavenBuild
+      - name: integrationArtifactDeploy
+        uses: SAP/project-piper-action@master
+        with:
+          step-name: integrationArtifactDeploy
+          flags: '--cpiApiServiceKeyCredentialsId {"oauth": {"createdate": "2022-11-02T09:48:13.398Z","clientid": "sb-47bbf5d2-d764-45d7-ba46-d6bd540cc4c6!b17976|it!b2455","url": "https://cpisuite-us-01.it-cpi003.cfapps.us10.hana.ondemand.com","clientsecret": "c52bbcff-ca23-4f90-b01f-73b0f552ebb6$fXqdreVaI13WTn8cdgXNW5Tt83RfvFg9pyVYBAVz8WI=","tokenurl": "https://cpisuite-us-01.authentication.us10.hana.ondemand.com/oauth/token"}} --integrationFlowId healthCheck'
