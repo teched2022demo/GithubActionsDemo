@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: integrationArtifactDeploy
-        uses: SAP/project-piper-action@main
+        uses: SAP/project-piper-action@master
         with:
           step-name: integrationArtifactDeploy
           flags: --apiServiceKey ${{ secrets.CPIAPISERVICEKEYCREDENTIALSID }} --integrationFlowId PurchaseOrderHandlerDemo
