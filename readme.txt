@@ -1,1 +1,1 @@
-GitHub Actions showcase with SAP Integration Suite Piper Commands 
+GitHub Actions showcase with SAP Integration Suite Piper Command 
